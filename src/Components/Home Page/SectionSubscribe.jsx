@@ -133,18 +133,18 @@ export default function SecSubs() {
                         "Er1Lb3uN24ROtrWxO"
                       )
                       .then(
-                        (result) => {
-                          console.log(result.text);
-                          alert(
-                            "Subscription successful! A thank you email has been sent."
-                          );
-                        },
-                        (error) => {
-                          console.log(error.text);
-                          alert("Failed to send email. Please try again.");
-                        }
+                        // (result) => {
+                        //   console.log(result.text);
+                        //   alert(
+                        //     "Subscription successful! A thank you email has been sent."
+                        //   );
+                        // },
+                        // (error) => {
+                        //   console.log(error.text);
+                        //   alert("Failed to send email. Please try again.");
+                        // }
                       );
-                    console.log("You have successfully subscribed!");
+                    // console.log("You have successfully subscribed!");
                     setNew(true);
                     setTimeout(() => {
                       setNew(false);
