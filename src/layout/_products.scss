@@ -1,0 +1,53 @@
+// main#products {
+.sec-container-products {
+    @apply py-4;
+
+    header {
+        .container-header {
+            @apply flex justify-between items-center endPhone:flex-col endPhone:items-center endPhone:gap-8;
+
+            .price-choices {
+                ul {
+                    @apply flex gap-4 endPhone:justify-between font-medium endTablentMinMax:flex-wrap endTablentMinMax:gap-2 endTablentMinMax:text-xs endPhone:flex-wrap endPhone:text-xs;
+
+                    li {
+                        @apply border-2 px-6 py-1 rounded-full cursor-pointer endTablentMinMax:px-4 transition-all duration-700;
+                    }
+                }
+            }
+        }
+    }
+
+    .container-products {
+        @apply flex justify-center flex-wrap gap-x-2 gap-y-4 py-8 endPhone:justify-center;
+
+        .card {
+            @apply relative flex w-56 h-[16.034rem] items-center flex-col py-8 px-4 gap-2 font-bold justify-between transition-all duration-700;
+
+            button {
+                @apply absolute right-0 bottom-0 p-2;
+            }
+
+            .new {
+                @apply absolute right-[0.75rem] top-[0.75rem] py-1 px-3 font-medium tracking-[0.063rem] text-white transition-all duration-700;
+            }
+        }
+    }
+}
+
+// }
+
+
+
+
+
+
+
+
+.active-light {
+    @apply text-light-theme-first-color border-light-theme-first-color;
+}
+
+.active-dark {
+    @apply text-dark-theme-first-color-dark border-dark-theme-first-color-dark;
+}

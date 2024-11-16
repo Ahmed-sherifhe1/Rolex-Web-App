@@ -1,0 +1,111 @@
+main#cart {
+    @apply font-custRoboto;
+
+
+    .x-container-cart {
+        @apply text-right cursor-pointer my-4 mx-auto;
+
+    }
+
+    .title-cart {
+        @apply text-center font-medium text-xl;
+    }
+
+    .container-cart {
+        @apply h-[60dvh];
+
+        .container-product-cart {
+            @apply flex items-center font-custRoboto font-bold gap-4 justify-between;
+
+            .container-img {
+                @apply flex items-center justify-center p-5 w-[5.625rem] h-[6.25rem] border;
+            }
+
+            .container-details-trash {
+                @apply flex items-end gap-4 w-3/5 justify-between;
+
+                .container-details {
+                    @apply flex flex-col justify-between gap-4;
+
+                    .content {
+                        @apply flex flex-col gap-2
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* width */
+@media (max-width:1199px) {
+    .container-cart {
+        width: 100% !important;
+    }
+
+}
+
+// .light-scroll {
+
+.light-scroll::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+/* Track */
+.light-scroll::-webkit-scrollbar-track {
+    border-radius: 10px !important;
+}
+
+/* Handle */
+.light-scroll::-webkit-scrollbar-thumb {
+    background: #ffb568 !important;
+    border-radius: 10px !important;
+}
+
+/* Handle on hover */
+.light-scroll::-webkit-scrollbar-thumb:hover {
+    background: #efbe8a !important;
+}
+
+// }
+
+// .dark-scroll {
+
+.dark-scroll::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+/* Track */
+.dark-scroll::-webkit-scrollbar-track {
+    border-radius: 10px !important;
+}
+
+/* Handle */
+.dark-scroll::-webkit-scrollbar-thumb {
+    background: #efbe8a !important;
+    border-radius: 10px !important;
+}
+
+/* Handle on hover */
+.dark-scroll::-webkit-scrollbar-thumb:hover {
+    background: #ffb568 !important;
+}
+
+
+.shadow-dark {
+    box-shadow: 0px 0px 24px 0px #EFBE8A;
+}
+
+.shadow-light {
+    box-shadow: 0px 0px 24px 0px #2E2E2E;
+}
+
+@media (max-width:768px) {
+    .shadow-dark {
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    .shadow-light {
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+}

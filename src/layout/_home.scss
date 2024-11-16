@@ -1,0 +1,341 @@
+// main#home {
+
+// Start styling section home
+.section-home {
+
+    .container-home-sec {
+        @apply flex justify-between items-center gap-24 pt-6 relative endTablet:gap-[2.5rem] endPhone:flex-wrap endPhone:flex-row-reverse;
+
+        .social {
+            ul {
+                @apply flex items-center gap-[4.69rem] endTablet:gap-11 endTablet:text-xs w-[0.6875rem] flex-col-reverse font-custRoboto endMediumLap:gap-[3.188rem] endMediumLap:text-sm;
+
+                li {
+                    @apply rotate-270 text-light-theme-text-color-light;
+                }
+            }
+        }
+
+        .content {
+            @apply font-custRoboto flex flex-col gap-8 endMediumLap:gap-4 endTablet:gap-3 endPhone:w-full;
+
+            h2 {
+                @apply font-bold leading-[140%] transition-all duration-700 text-[2rem] endTablet:text-2xl;
+            }
+
+            p {
+                @apply text-sm leading-[140%] transition-all duration-700 w-80 endTablet:w-64 endTablet:text-[0.688rem];
+            }
+
+            span {
+                @apply font-medium text-2xl transition-all duration-700;
+            }
+
+            .buttons {
+                @apply mt-14 endPhone:mt-8;
+
+                button:first-child {
+                    @apply py-4 px-6 font-medium endTablet:py-2 endTablet:px-3;
+                }
+
+
+            }
+        }
+    }
+
+    .watch {
+        // @apply flex justify-end items-center z-[1];
+        @apply w-1/2 flex justify-end endPhone:w-[70%] items-center z-[1];
+
+        // img {
+        // @apply w-9/12 endMediumLap:w-full endTablentMinMax:w-11/12 endPhone:w-[80%];
+        // }
+    }
+
+    // endPhone:top-[-20%]
+    .shape {
+        @apply absolute transition-all duration-700 endTablentMinMax:top-[-20%] endTablentMinMax:h-[120%] endPhone:w-[89%] endPhone:right-[-20%] w-[45%] top-[-16%] right-[-2%] z-[0] h-[115%] endMediumLap:top-[-20%] endMediumLap:h-[125%] endPhone:h-[70%];
+    }
+}
+
+// End styling section home
+.featured {
+    @apply pt-32 font-custRoboto endTablentMinMax:pt-64 endTablentMinMax:pb-16 endMediumLap:pt-48 endMediumLap:pb-0 endPhone:pt-36;
+
+    .container {
+        hr {
+            @apply h-0.5 my-0 mx-auto border-0;
+        }
+
+        h3 {
+            @apply font-medium text-center my-4 tracking-[0.063rem] text-2xl;
+        }
+
+        .container-cards {
+            @apply flex gap-8 my-12 h-[29rem] flex-wrap justify-around endTablentMinMax:gap-3 endTablentMinMax:h-[26rem] endPhone:h-auto bigLapbefore4k:gap-0;
+
+            .card {
+                @apply py-10 font-bold px-20 h-[22rem] flex flex-col gap-2 transition-all duration-700 overflow-hidden items-center border relative before:content-["SALE"] before:absolute before:-left-[1.25rem] before:py-2 before:px-4 before:top-[2.813rem] before:tracking-[0.063rem] before:rotate-270 before:font-medium before:text-light-theme-container-color hover:h-[29rem] endMediumLap:px-8 endMediumLap:py-8 endMediumLap:hover:h-[27rem] endTablentMinMax:p-3 endTablentMinMax:before:py-1 endTablentMinMax:before:px-3 endTablentMinMax:h-80 endTablentMinMax:hover:h-[26rem] endPhone:px-12 endPhone:py-8 endPhone:h-[21rem] endPhone:hover:h-[27rem];
+
+                &:hover {
+                    box-shadow: 0px 12px 32px rgba(51, 51, 51, 10%);
+
+                    button {
+                        @apply opacity-100;
+                    }
+                }
+
+                button {
+                    @apply py-4 px-8 my-8 opacity-0 transition-all text-light-theme-container-color duration-700 endPhone:text-sm;
+                }
+            }
+        }
+    }
+}
+
+.story {
+    @apply py-16;
+
+    .container-ourStory {
+        @apply flex font-custRoboto gap-8 items-center justify-between endTablentMinMax:gap-7 endPhone:flex-col-reverse;
+
+        .watch {
+            @apply h-[33.125rem] w-[33.125rem] relative endMediumLap:size-[24.125rem] endTablentMinMax:size-[20.125rem] endPhone:size-[15.125rem];
+
+            img {
+                @apply absolute top-0 right-0 endMediumLap:w-[20.125rem] z-[1] endTablentMinMax:w-[17.125rem] endPhone:w-[13.125rem];
+            }
+
+            div {
+                @apply absolute left-0 bottom-0 h-[28.125rem] w-[28.125rem] -z-10 endMediumLap:size-[20.125rem] endTablentMinMax:size-[17.125rem] endPhone:size-[13.125rem] z-[0];
+            }
+        }
+
+        .content {
+            @apply w-2/5 flex flex-col gap-8 items-start endMediumLap:gap-4 endTablentMinMax:gap-3 endPhone:w-full endPhone:gap-5;
+
+            .header-story {
+                @apply flex flex-col gap-2 endMediumLap:gap-1 endPhone:items-center endPhone:mx-auto endPhone:mt-0 endPhone:mb-6;
+
+                hr {
+                    @apply w-[60%] h-[0.125rem] border-0;
+                }
+
+                h3 {
+                    @apply font-medium tracking-[0.063rem] endMediumLap:text-xl;
+
+                }
+            }
+
+            h2 {
+                @apply font-medium text-4xl leading-[inherit] endMediumLap:text-3xl endTablentMinMax:text-2xl endPhone:text-2xl;
+            }
+
+            p {
+                @apply endMediumLap:text-xs endTablentMinMax:text-xs endPhone:text-xs;
+            }
+
+            button {
+                @apply px-4 py-2 endTablentMinMax:py-1 endTablentMinMax:px-3;
+                box-shadow: 0px 12px 24px 0px rgb(43 43 43 / 50%);
+            }
+        }
+    }
+}
+
+.products {
+    @apply py-16 font-custRoboto;
+
+    .container {
+        hr {
+            @apply h-[0.125rem] border-0 w-[5%] mx-auto endPhone:w-[20%];
+
+        }
+
+        h3 {
+            @apply text-center my-4 font-medium text-2xl tracking-[0.063rem];
+        }
+
+        .container-cards {
+            @apply w-[70%] my-12 mx-auto flex flex-wrap items-center justify-between gap-4 endMediumLap:gap-2 endTablentMinMax:gap-2 endPhone:w-full endPhone:gap-2;
+
+            .card {
+                @apply w-[13rem] transition-all duration-700 border flex gap-4 font-medium font-custRoboto py-8 flex-col relative items-center endMediumLap:w-44 endMediumLap:py-4 endTablentMinMax:py-4 endTablentMinMax:w-[8.625rem] endTablentMinMax:text-xs endPhone:text-xs endPhone:w-[48%] endPhone:gap-2;
+
+                img {
+                    @apply endPhone:h-[6rem];
+                }
+
+                button {
+                    @apply absolute bottom-0 right-0 p-2;
+                }
+
+                &:last-child {
+                    opacity: 0 !important;
+
+                    button,
+                    h4,
+                    span,
+                    img {
+                        display: none;
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 0px 0px 0px rgba(#1A1A1A, 0%);
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0px 8px 32px 0px rgba(#1A1A1A, 10%);
+                }
+            }
+        }
+    }
+}
+
+.sec-opinions {
+    @apply py-16;
+
+    .container-sec-opinions {
+        @apply flex font-custRoboto gap-48 items-center justify-end endTablentMinMax:gap-7 endPhone:flex-col endMediumLap:gap-0 endMediumLap:justify-between endPhone:gap-12;
+
+        .watch {
+            @apply h-[33.125rem] w-[33.125rem] relative endMediumLap:size-[24.125rem] endTablentMinMax:size-[20.125rem] endPhone:size-[15.125rem];
+
+            img {
+                @apply absolute bottom-0 z-[1] left-0 endMediumLap:w-[20.125rem] endTablentMinMax:w-[17.125rem] endPhone:w-[13.125rem];
+            }
+
+            div {
+                @apply absolute right-0 z-[0] top-0 h-[28.125rem] w-[28.125rem] endMediumLap:size-[20.125rem] endTablentMinMax:size-[17.125rem] endPhone:size-[13.125rem];
+            }
+        }
+
+        .opinions-and-btns {
+            @apply w-[28%] items-start flex flex-col gap-12 endMediumLap:w-[39%] endMediumLap:gap-8 endTablentMinMax:w-[40%] endTablentMinMax:gap-4 endPhone:w-full endPhone:gap-7;
+
+            span {
+                @apply inline-block p-[0.844rem] border;
+                box-shadow: 0px 8px 12px 0px rgba(#333333, 30%);
+            }
+
+            .container-opinions {
+                @apply overflow-x-auto scroll-smooth flex flex-col gap-8 items-start endMediumLap:gap-4 endTablentMinMax:gap-3 endPhone:w-full endPhone:gap-5 endTablentMinMax:w-[99%];
+                scroll-snap-type: x mandatory;
+                scrollbar-width: 0;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .opinions {
+                    @apply flex w-[400%];
+                    scroll-snap-type: none;
+
+                    .opinion {
+                        scroll-snap-align: start;
+                        @apply flex flex-col justify-center w-full items-start gap-6 cursor-grab select-none endTablentMinMax:gap-3;
+
+
+
+                        .content {
+                            @apply flex flex-col gap-2;
+
+                            p {
+                                @apply leading-[140%] endTablentMinMax:text-xs endPhone:text-xs;
+                            }
+
+                            h3 {
+                                @apply font-bold;
+                            }
+                        }
+
+                        .person {
+                            @apply flex items-center gap-3;
+
+                            .details {
+                                h2 {
+                                    @apply text-xl font-bold;
+                                }
+
+                                p {
+                                    @apply text-sm;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .buttons {
+                @apply flex gap-4;
+
+                button {
+                    @apply p-[0.563rem] transition-all duration-500;
+
+                    &:hover {
+                        box-shadow: 0px 4px 12px 0px rgba(#333333, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sec-new-arivals {
+    @apply pt-32 font-custRoboto endTablentMinMax:pt-64 endTablentMinMax:pb-0 endMediumLap:pt-48 endMediumLap:pb-0 endPhone:pt-36;
+
+    .container {
+        hr {
+            @apply w-[5%] h-0.5 my-0 mx-auto border-0 endPhone:w-1/5;
+        }
+
+        h3 {
+            @apply font-medium text-center my-4 tracking-[0.063rem] text-2xl;
+        }
+
+        .container-cards {
+            @apply flex gap-4 mt-12 h-[29rem] flex-wrap justify-between endMediumLap:gap-0 endTablentMinMax:gap-0 endTablentMinMax:h-[20rem] endPhone:h-auto bigLapbefore4k:gap-0 endPhone:justify-center endMediumLap:mb-0 endMediumLap:h-[27rem];
+
+            .card {
+                @apply py-10 font-bold endPhone:w-full px-6 h-[22rem] before:transition-all before:duration-700 flex flex-col gap-2 transition-all duration-700 overflow-hidden items-center border relative before:content-["NEW"] before:absolute before:right-3 before:py-1 before:px-3 before:top-3 before:tracking-[0.063rem] before:font-medium before:text-light-theme-container-color hover:h-[29rem] endMediumLap:p-4 endMediumLap:h-80 endMediumLap:hover:h-[27rem] endTablentMinMax:hover:h-80 endTablentMinMax:py-8 endTablentMinMax:px-4 endTablentMinMax:before:text-[0.625rem] endTablentMinMax:before:py-[0.156rem] endTablentMinMax:before:px-[0.313rem] endTablentMinMax:h-64 endPhone:px-12 endPhone:py-8 endPhone:h-[21rem] endPhone:hover:h-[27rem];
+
+                img {
+                    @apply endTablentMinMax:w-20;
+                }
+
+                &:hover {
+                    h4 {
+                        color: #2E2E2E;
+                    }
+
+                    span {
+                        color: #2E2E2E;
+                    }
+
+                    button {
+                        @apply opacity-100;
+                    }
+                }
+
+                h4,
+                span {
+                    @apply transition-all duration-700 endTablentMinMax:text-xs;
+                }
+
+                span {
+                    // @apply 
+                }
+
+                button {
+                    @apply py-4 px-8 my-8 opacity-0 text-light-theme-container-color endPhone:text-sm endTablentMinMax:text-xs endTablentMinMax:py-3 endTablentMinMax:px-[0.625rem];
+                }
+            }
+        }
+    }
+}
+
+
+// }

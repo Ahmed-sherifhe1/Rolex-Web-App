@@ -1,0 +1,21 @@
+// main#receiptPage {
+// @apply ;
+
+.container-recieptPage {
+    @apply flex flex-col gap-8 py-12 font-custRoboto;
+
+    .container-pdf {
+        @apply flex justify-evenly items-center gap-4 endPhone:flex-col;
+
+        .container-account {
+            @apply flex gap-4 endPhone:p-3 endPhone:flex-col p-4 justify-between items-center border-2 rounded-xl endPhone:w-full;
+
+            img {
+                @apply rounded-full border;
+                box-shadow: 0px 0px 100px 0px;
+            }
+        }
+    }
+}
+
+// }

@@ -1,0 +1,32 @@
+.sec-subscribe {
+    @apply py-8;
+
+    .container-subs {
+        @apply p-16 font-custRoboto flex justify-between items-center endTablentMinMax:p-8 endPhone:flex-col endPhone:text-center endPhone:px-4 endPhone:gap-8;
+
+        .content {
+            @apply flex flex-col gap-6;
+
+            h2 {
+                @apply text-4xl font-medium text-light-theme-title-color endTablentMinMax:text-3xl endPhone:text-2xl endPhone:leading-[140%];
+            }
+
+            p {
+                @apply leading-[140%] text-[#333333] w-[25.75rem] endMediumLap:w-[22.5rem] endMediumLap:text-sm endTablentMinMax:w-[16.063rem] endTablentMinMax:text-[0.625rem] endPhone:w-[13.188rem] endPhone:text-xs;
+            }
+        }
+
+        .subscribe {
+            @apply flex endTablentMinMax:flex endTablentMinMax:justify-end endTablentMinMax:w-1/2 endPhone:flex endPhone:flex-col endPhone:gap-4 endPhone:w-full endPhone:my-0 endPhone:mx-auto endPhone:items-center;
+
+            input {
+                @apply py-4 pr-20 pl-4 outline-0 endPhone:px-0 endMediumLap:pr-0 endTablentMinMax:w-[100%] endTablentMinMax:pl-2 endTablentMinMax:pr-0 endPhone:text-center endPhone:w-[100%];
+
+            }
+
+            button {
+                @apply py-4 px-8 text-light-theme-container-color endMediumLap:px-4 endTablentMinMax:w-2/5 endTablentMinMax:px-4 endPhone:w-[90%];
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+// main#checout {
+.container-checkOut {
+
+    @apply font-custRoboto;
+
+    table {
+        @apply table-auto w-full text-start p-4 endPhone:text-[0.65rem];
+
+        thead {
+            @apply text-light-theme-title-color;
+
+            tr th {
+                @apply text-start p-2;
+            }
+        }
+
+        tbody {
+            tr td {
+                @apply p-2
+            }
+        }
+    }
+
+    .container-total-account {
+        @apply my-8 endPhone:gap-4 endPhone:my-4 endPhone:flex-col-reverse flex mx-0 justify-between items-center;
+
+        .totalPrice {
+            @apply endPhone:w-full font-bold endPhone:text-lg endPhone:gap-2 flex flex-col py-2 px-8 border w-32 rounded-2xl justify-center items-center;
+
+        }
+
+        .container-account {
+            @apply flex gap-4 endPhone:p-3 endPhone:flex-col p-4 justify-between items-center border-2 rounded-xl;
+
+            img {
+                @apply rounded-full border;
+                box-shadow: 0px 0px 100px 0px;
+            }
+        }
+    }
+}
+
+// }
+
+
+.inputShadow:focus {
+
+    box-shadow: 0px 0px 50px 0px #efbe8a;
+}
+
+.inputShadowLight {
+    box-shadow: 0px 0px 50px 0px #ffb568;
+}
+
+.inputNotShadow {
+    box-shadow: 0px 0px 50px 0px transparent;
+}

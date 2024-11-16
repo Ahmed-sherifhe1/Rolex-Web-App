@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+    buildDir = "public"

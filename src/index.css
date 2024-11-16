@@ -1,0 +1,633 @@
+.container {
+  @apply w-4/5 mx-auto;
+  width: 80% !important;
+}
+
+body {
+  background-color: #FCFCFC;
+}
+
+* {
+  scroll-behavior: smooth;
+  cursor: none !important;
+}
+
+.cursorBack::before {
+  box-shadow: 0px 0px 5px 0px gray;
+}
+
+.scroll-top {
+  height: 100%;
+  width: 7px;
+  scale: 1 0;
+  position: fixed;
+  right: 0;
+  z-index: 100000000000000000;
+  transform-origin: top;
+  animation: scroll-moving linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-moving {
+  to {
+    scale: 1;
+  }
+}
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .scroll-top {
+    height: 7px;
+    width: 100%;
+    scale: 0 1;
+    top: 0;
+    transform-origin: left;
+  }
+  .cursorBack {
+    display: none !important;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+nav {
+  @apply z-[50];
+}
+
+.container-nav {
+  @apply flex justify-between items-center py-6;
+}
+
+.links-list {
+  @apply flex tablet:gap-[0.8rem] endMediumLap:gap-[1.3rem] tablet:text-xs mediumLap:text-base bigLap:gap-[3.5rem] endPhone:absolute endPhone:top-1/3 endPhone:left-1/2 endPhone:translate-x-[-50%] endPhone:translate-y-[-50%] endPhone:flex-col endPhone:items-center endPhone:gap-6 endPhone:text-3xl endPhone:font-medium endPhone:uppercase;
+}
+
+.container-links {
+  @apply endPhone:fixed endPhone:z-50 endPhone:h-[100dvh] endPhone:w-full endPhone:top-0 endPhone:left-full transition-all duration-700;
+}
+.container-links li {
+  @apply transition-all duration-300;
+}
+.container-links li:hover {
+  @apply cursor-pointer;
+}
+
+.logo-links {
+  @apply w-1/2 flex justify-between items-center overflow-hidden text-light-theme-title-color;
+}
+
+.section-home .container-home-sec {
+  @apply flex justify-between items-center gap-24 pt-6 relative endTablet:gap-[2.5rem] endPhone:flex-wrap endPhone:flex-row-reverse;
+}
+.section-home .container-home-sec .social ul {
+  @apply flex items-center gap-[4.69rem] endTablet:gap-11 endTablet:text-xs w-[0.6875rem] flex-col-reverse font-custRoboto endMediumLap:gap-[3.188rem] endMediumLap:text-sm;
+}
+.section-home .container-home-sec .social ul li {
+  @apply rotate-270 text-light-theme-text-color-light;
+}
+.section-home .container-home-sec .content {
+  @apply font-custRoboto flex flex-col gap-8 endMediumLap:gap-4 endTablet:gap-3 endPhone:w-full;
+}
+.section-home .container-home-sec .content h2 {
+  @apply font-bold leading-[140%] transition-all duration-700 text-[2rem] endTablet:text-2xl;
+}
+.section-home .container-home-sec .content p {
+  @apply text-sm leading-[140%] transition-all duration-700 w-80 endTablet:w-64 endTablet:text-[0.688rem];
+}
+.section-home .container-home-sec .content span {
+  @apply font-medium text-2xl transition-all duration-700;
+}
+.section-home .container-home-sec .content .buttons {
+  @apply mt-14 endPhone:mt-8;
+}
+.section-home .container-home-sec .content .buttons button:first-child {
+  @apply py-4 px-6 font-medium endTablet:py-2 endTablet:px-3;
+}
+.section-home .watch {
+  @apply w-1/2 flex justify-end endPhone:w-[70%] items-center z-[1];
+}
+.section-home .shape {
+  @apply absolute transition-all duration-700 endTablentMinMax:top-[-20%] endTablentMinMax:h-[120%] endPhone:w-[89%] endPhone:right-[-20%] w-[45%] top-[-16%] right-[-2%] z-[0] h-[115%] endMediumLap:top-[-20%] endMediumLap:h-[125%] endPhone:h-[70%];
+}
+
+.featured {
+  @apply pt-32 font-custRoboto endTablentMinMax:pt-64 endTablentMinMax:pb-16 endMediumLap:pt-48 endMediumLap:pb-0 endPhone:pt-36;
+}
+.featured .container hr {
+  @apply h-0.5 my-0 mx-auto border-0;
+}
+.featured .container h3 {
+  @apply font-medium text-center my-4 tracking-[0.063rem] text-2xl;
+}
+.featured .container .container-cards {
+  @apply flex gap-8 my-12 h-[29rem] flex-wrap justify-around endTablentMinMax:gap-3 endTablentMinMax:h-[26rem] endPhone:h-auto bigLapbefore4k:gap-0;
+}
+.featured .container .container-cards .card {
+  @apply py-10 font-bold px-20 h-[22rem] flex flex-col gap-2 transition-all duration-700 overflow-hidden items-center border relative before:content-["SALE"] before:absolute before:-left-[1.25rem] before:py-2 before:px-4 before:top-[2.813rem] before:tracking-[0.063rem] before:rotate-270 before:font-medium before:text-light-theme-container-color hover:h-[29rem] endMediumLap:px-8 endMediumLap:py-8 endMediumLap:hover:h-[27rem] endTablentMinMax:p-3 endTablentMinMax:before:py-1 endTablentMinMax:before:px-3 endTablentMinMax:h-80 endTablentMinMax:hover:h-[26rem] endPhone:px-12 endPhone:py-8 endPhone:h-[21rem] endPhone:hover:h-[27rem];
+}
+.featured .container .container-cards .card:hover {
+  box-shadow: 0px 12px 32px rgba(51, 51, 51, 0.1);
+}
+.featured .container .container-cards .card:hover button {
+  @apply opacity-100;
+}
+.featured .container .container-cards .card button {
+  @apply py-4 px-8 my-8 opacity-0 transition-all text-light-theme-container-color duration-700 endPhone:text-sm;
+}
+
+.story {
+  @apply py-16;
+}
+.story .container-ourStory {
+  @apply flex font-custRoboto gap-8 items-center justify-between endTablentMinMax:gap-7 endPhone:flex-col-reverse;
+}
+.story .container-ourStory .watch {
+  @apply h-[33.125rem] w-[33.125rem] relative endMediumLap:size-[24.125rem] endTablentMinMax:size-[20.125rem] endPhone:size-[15.125rem];
+}
+.story .container-ourStory .watch img {
+  @apply absolute top-0 right-0 endMediumLap:w-[20.125rem] z-[1] endTablentMinMax:w-[17.125rem] endPhone:w-[13.125rem];
+}
+.story .container-ourStory .watch div {
+  @apply absolute left-0 bottom-0 h-[28.125rem] w-[28.125rem] -z-10 endMediumLap:size-[20.125rem] endTablentMinMax:size-[17.125rem] endPhone:size-[13.125rem] z-[0];
+}
+.story .container-ourStory .content {
+  @apply w-2/5 flex flex-col gap-8 items-start endMediumLap:gap-4 endTablentMinMax:gap-3 endPhone:w-full endPhone:gap-5;
+}
+.story .container-ourStory .content .header-story {
+  @apply flex flex-col gap-2 endMediumLap:gap-1 endPhone:items-center endPhone:mx-auto endPhone:mt-0 endPhone:mb-6;
+}
+.story .container-ourStory .content .header-story hr {
+  @apply w-[60%] h-[0.125rem] border-0;
+}
+.story .container-ourStory .content .header-story h3 {
+  @apply font-medium tracking-[0.063rem] endMediumLap:text-xl;
+}
+.story .container-ourStory .content h2 {
+  @apply font-medium text-4xl leading-[inherit] endMediumLap:text-3xl endTablentMinMax:text-2xl endPhone:text-2xl;
+}
+.story .container-ourStory .content p {
+  @apply endMediumLap:text-xs endTablentMinMax:text-xs endPhone:text-xs;
+}
+.story .container-ourStory .content button {
+  @apply px-4 py-2 endTablentMinMax:py-1 endTablentMinMax:px-3;
+  box-shadow: 0px 12px 24px 0px rgba(43, 43, 43, 0.5);
+}
+
+.products {
+  @apply py-16 font-custRoboto;
+}
+.products .container hr {
+  @apply h-[0.125rem] border-0 w-[5%] mx-auto endPhone:w-[20%];
+}
+.products .container h3 {
+  @apply text-center my-4 font-medium text-2xl tracking-[0.063rem];
+}
+.products .container .container-cards {
+  @apply w-[70%] my-12 mx-auto flex flex-wrap items-center justify-between gap-4 endMediumLap:gap-2 endTablentMinMax:gap-2 endPhone:w-full endPhone:gap-2;
+}
+.products .container .container-cards .card {
+  @apply w-[13rem] transition-all duration-700 border flex gap-4 font-medium font-custRoboto py-8 flex-col relative items-center endMediumLap:w-44 endMediumLap:py-4 endTablentMinMax:py-4 endTablentMinMax:w-[8.625rem] endTablentMinMax:text-xs endPhone:text-xs endPhone:w-[48%] endPhone:gap-2;
+}
+.products .container .container-cards .card img {
+  @apply endPhone:h-[6rem];
+}
+.products .container .container-cards .card button {
+  @apply absolute bottom-0 right-0 p-2;
+}
+.products .container .container-cards .card:last-child {
+  opacity: 0 !important;
+}
+.products .container .container-cards .card:last-child button,
+.products .container .container-cards .card:last-child h4,
+.products .container .container-cards .card:last-child span,
+.products .container .container-cards .card:last-child img {
+  display: none;
+}
+.products .container .container-cards .card:last-child:hover {
+  box-shadow: 0px 0px 0px 0px rgba(26, 26, 26, 0);
+}
+.products .container .container-cards .card:hover {
+  box-shadow: 0px 8px 32px 0px rgba(26, 26, 26, 0.1);
+}
+
+.sec-opinions {
+  @apply py-16;
+}
+.sec-opinions .container-sec-opinions {
+  @apply flex font-custRoboto gap-48 items-center justify-end endTablentMinMax:gap-7 endPhone:flex-col endMediumLap:gap-0 endMediumLap:justify-between endPhone:gap-12;
+}
+.sec-opinions .container-sec-opinions .watch {
+  @apply h-[33.125rem] w-[33.125rem] relative endMediumLap:size-[24.125rem] endTablentMinMax:size-[20.125rem] endPhone:size-[15.125rem];
+}
+.sec-opinions .container-sec-opinions .watch img {
+  @apply absolute bottom-0 z-[1] left-0 endMediumLap:w-[20.125rem] endTablentMinMax:w-[17.125rem] endPhone:w-[13.125rem];
+}
+.sec-opinions .container-sec-opinions .watch div {
+  @apply absolute right-0 z-[0] top-0 h-[28.125rem] w-[28.125rem] endMediumLap:size-[20.125rem] endTablentMinMax:size-[17.125rem] endPhone:size-[13.125rem];
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns {
+  @apply w-[28%] items-start flex flex-col gap-12 endMediumLap:w-[39%] endMediumLap:gap-8 endTablentMinMax:w-[40%] endTablentMinMax:gap-4 endPhone:w-full endPhone:gap-7;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns span {
+  @apply inline-block p-[0.844rem] border;
+  box-shadow: 0px 8px 12px 0px rgba(51, 51, 51, 0.3);
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions {
+  @apply overflow-x-auto scroll-smooth flex flex-col gap-8 items-start endMediumLap:gap-4 endTablentMinMax:gap-3 endPhone:w-full endPhone:gap-5 endTablentMinMax:w-[99%];
+  scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions::-webkit-scrollbar {
+  display: none;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions {
+  @apply flex w-[400%];
+  scroll-snap-type: none;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion {
+  scroll-snap-align: start;
+  @apply flex flex-col justify-center w-full items-start gap-6 cursor-grab select-none endTablentMinMax:gap-3;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion .content {
+  @apply flex flex-col gap-2;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion .content p {
+  @apply leading-[140%] endTablentMinMax:text-xs endPhone:text-xs;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion .content h3 {
+  @apply font-bold;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion .person {
+  @apply flex items-center gap-3;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion .person .details h2 {
+  @apply text-xl font-bold;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .container-opinions .opinions .opinion .person .details p {
+  @apply text-sm;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .buttons {
+  @apply flex gap-4;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .buttons button {
+  @apply p-[0.563rem] transition-all duration-500;
+}
+.sec-opinions .container-sec-opinions .opinions-and-btns .buttons button:hover {
+  box-shadow: 0px 4px 12px 0px rgba(51, 51, 51, 0.1);
+}
+
+.sec-new-arivals {
+  @apply pt-32 font-custRoboto endTablentMinMax:pt-64 endTablentMinMax:pb-0 endMediumLap:pt-48 endMediumLap:pb-0 endPhone:pt-36;
+}
+.sec-new-arivals .container hr {
+  @apply w-[5%] h-0.5 my-0 mx-auto border-0 endPhone:w-1/5;
+}
+.sec-new-arivals .container h3 {
+  @apply font-medium text-center my-4 tracking-[0.063rem] text-2xl;
+}
+.sec-new-arivals .container .container-cards {
+  @apply flex gap-4 mt-12 h-[29rem] flex-wrap justify-between endMediumLap:gap-0 endTablentMinMax:gap-0 endTablentMinMax:h-[20rem] endPhone:h-auto bigLapbefore4k:gap-0 endPhone:justify-center endMediumLap:mb-0 endMediumLap:h-[27rem];
+}
+.sec-new-arivals .container .container-cards .card {
+  @apply py-10 font-bold endPhone:w-full px-6 h-[22rem] before:transition-all before:duration-700 flex flex-col gap-2 transition-all duration-700 overflow-hidden items-center border relative before:content-["NEW"] before:absolute before:right-3 before:py-1 before:px-3 before:top-3 before:tracking-[0.063rem] before:font-medium before:text-light-theme-container-color hover:h-[29rem] endMediumLap:p-4 endMediumLap:h-80 endMediumLap:hover:h-[27rem] endTablentMinMax:hover:h-80 endTablentMinMax:py-8 endTablentMinMax:px-4 endTablentMinMax:before:text-[0.625rem] endTablentMinMax:before:py-[0.156rem] endTablentMinMax:before:px-[0.313rem] endTablentMinMax:h-64 endPhone:px-12 endPhone:py-8 endPhone:h-[21rem] endPhone:hover:h-[27rem];
+}
+.sec-new-arivals .container .container-cards .card img {
+  @apply endTablentMinMax:w-20;
+}
+.sec-new-arivals .container .container-cards .card:hover h4 {
+  color: #2E2E2E;
+}
+.sec-new-arivals .container .container-cards .card:hover span {
+  color: #2E2E2E;
+}
+.sec-new-arivals .container .container-cards .card:hover button {
+  @apply opacity-100;
+}
+.sec-new-arivals .container .container-cards .card h4,
+.sec-new-arivals .container .container-cards .card span {
+  @apply transition-all duration-700 endTablentMinMax:text-xs;
+}
+.sec-new-arivals .container .container-cards .card button {
+  @apply py-4 px-8 my-8 opacity-0 text-light-theme-container-color endPhone:text-sm endTablentMinMax:text-xs endTablentMinMax:py-3 endTablentMinMax:px-[0.625rem];
+}
+
+footer {
+  @apply py-8;
+}
+footer .container-footer {
+  @apply endPhone:flex-col endPhone:gap-12 flex justify-between endTablentMinMax:text-xs;
+}
+footer .container-footer .card {
+  @apply flex flex-col gap-4;
+}
+footer .container-footer .card h3 {
+  @apply font-medium text-xl;
+}
+footer .container-footer .card ul {
+  @apply flex flex-col gap-2;
+}
+footer .container-footer .card:not(:first-child) ul li {
+  @apply hover:translate-x-3 transition-all duration-700;
+}
+footer .container-footer .card:last-child div {
+  @apply flex gap-4 text-2xl endTablentMinMax:text-xl;
+}
+footer .container-footer .card:last-child div a {
+  @apply transition-all duration-700;
+}
+footer .container-copyrights {
+  @apply py-4 text-center font-custRoboto;
+}
+footer .container-copyrights hr {
+  @apply my-8 border-0 h-[1px];
+}
+footer .container-copyrights .end-footer {
+  @apply text-light-theme-text-color-light;
+}
+footer .container-copyrights .end-footer .myName {
+  animation: lightning 2s alternate backwards infinite;
+  font-family: "Dancing Script", cursive !important;
+}
+
+@keyframes lightning {
+  0% {
+    text-shadow: 0 0 20px #FFB568;
+  }
+  100% {
+    text-shadow: 0 0 0px #FFB568;
+  }
+}
+.sec-container-products {
+  @apply py-4;
+}
+.sec-container-products header .container-header {
+  @apply flex justify-between items-center endPhone:flex-col endPhone:items-center endPhone:gap-8;
+}
+.sec-container-products header .container-header .price-choices ul {
+  @apply flex gap-4 endPhone:justify-between font-medium endTablentMinMax:flex-wrap endTablentMinMax:gap-2 endTablentMinMax:text-xs endPhone:flex-wrap endPhone:text-xs;
+}
+.sec-container-products header .container-header .price-choices ul li {
+  @apply border-2 px-6 py-1 rounded-full cursor-pointer endTablentMinMax:px-4 transition-all duration-700;
+}
+.sec-container-products .container-products {
+  @apply flex justify-center flex-wrap gap-x-2 gap-y-4 py-8 endPhone:justify-center;
+}
+.sec-container-products .container-products .card {
+  @apply relative flex w-56 h-[16.034rem] items-center flex-col py-8 px-4 gap-2 font-bold justify-between transition-all duration-700;
+}
+.sec-container-products .container-products .card button {
+  @apply absolute right-0 bottom-0 p-2;
+}
+.sec-container-products .container-products .card .new {
+  @apply absolute right-[0.75rem] top-[0.75rem] py-1 px-3 font-medium tracking-[0.063rem] text-white transition-all duration-700;
+}
+
+.active-light {
+  @apply text-light-theme-first-color border-light-theme-first-color;
+}
+
+.active-dark {
+  @apply text-dark-theme-first-color-dark border-dark-theme-first-color-dark;
+}
+
+.container-productView {
+  @apply py-12 font-custRoboto endPhone:py-4;
+}
+.container-productView .content-page {
+  @apply flex gap-4 justify-between endPhone:flex-col items-start;
+}
+.container-productView .content-page .gallery {
+  @apply flex items-center gap-8 endPhone:flex-col-reverse pt-12;
+}
+.container-productView .content-page .gallery .small-images {
+  @apply flex flex-col gap-2 endPhone:flex-row;
+}
+.container-productView .content-page .gallery .small-images img {
+  @apply p-4 border-2 cursor-pointer transition-all duration-700 endPhone:p-2 endPhone:size-[60px];
+}
+.container-productView .content-page .gallery .small-images img.active-light-galley {
+  @apply border-light-theme-first-color;
+}
+.container-productView .content-page .gallery .small-images img.active-dark-galley {
+  @apply border-dark-theme-first-color-dark;
+}
+.container-productView .content-page .gallery .container-base {
+  @apply w-[25rem] h-[25rem] endTablentMinMax:w-60 endTablentMinMax:h-60 endPhone:w-32 endPhone:h-32 endPhone:items-center flex justify-center;
+}
+.container-productView .content-page .gallery .container-base .base {
+  filter: drop-shadow(0px 0px 250px);
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  main#productView .container-productView .content-page .gallery .container-base .base {
+    filter: drop-shadow(0px 0px 80px);
+  }
+}
+.sec-subscribe {
+  @apply py-8;
+}
+.sec-subscribe .container-subs {
+  @apply p-16 font-custRoboto flex justify-between items-center endTablentMinMax:p-8 endPhone:flex-col endPhone:text-center endPhone:px-4 endPhone:gap-8;
+}
+.sec-subscribe .container-subs .content {
+  @apply flex flex-col gap-6;
+}
+.sec-subscribe .container-subs .content h2 {
+  @apply text-4xl font-medium text-light-theme-title-color endTablentMinMax:text-3xl endPhone:text-2xl endPhone:leading-[140%];
+}
+.sec-subscribe .container-subs .content p {
+  @apply leading-[140%] text-[#333333] w-[25.75rem] endMediumLap:w-[22.5rem] endMediumLap:text-sm endTablentMinMax:w-[16.063rem] endTablentMinMax:text-[0.625rem] endPhone:w-[13.188rem] endPhone:text-xs;
+}
+.sec-subscribe .container-subs .subscribe {
+  @apply flex endTablentMinMax:flex endTablentMinMax:justify-end endTablentMinMax:w-1/2 endPhone:flex endPhone:flex-col endPhone:gap-4 endPhone:w-full endPhone:my-0 endPhone:mx-auto endPhone:items-center;
+}
+.sec-subscribe .container-subs .subscribe input {
+  @apply py-4 pr-20 pl-4 outline-0 endPhone:px-0 endMediumLap:pr-0 endTablentMinMax:w-[100%] endTablentMinMax:pl-2 endTablentMinMax:pr-0 endPhone:text-center endPhone:w-[100%];
+}
+.sec-subscribe .container-subs .subscribe button {
+  @apply py-4 px-8 text-light-theme-container-color endMediumLap:px-4 endTablentMinMax:w-2/5 endTablentMinMax:px-4 endPhone:w-[90%];
+}
+
+main#cart {
+  @apply font-custRoboto;
+}
+main#cart .x-container-cart {
+  @apply text-right cursor-pointer my-4 mx-auto;
+}
+main#cart .title-cart {
+  @apply text-center font-medium text-xl;
+}
+main#cart .container-cart {
+  @apply h-[60dvh];
+}
+main#cart .container-cart .container-product-cart {
+  @apply flex items-center font-custRoboto font-bold gap-4 justify-between;
+}
+main#cart .container-cart .container-product-cart .container-img {
+  @apply flex items-center justify-center p-5 w-[5.625rem] h-[6.25rem] border;
+}
+main#cart .container-cart .container-product-cart .container-details-trash {
+  @apply flex items-end gap-4 w-3/5 justify-between;
+}
+main#cart .container-cart .container-product-cart .container-details-trash .container-details {
+  @apply flex flex-col justify-between gap-4;
+}
+main#cart .container-cart .container-product-cart .container-details-trash .container-details .content {
+  @apply flex flex-col gap-2;
+}
+
+/* width */
+@media (max-width: 1199px) {
+  .container-cart {
+    width: 100% !important;
+  }
+}
+.light-scroll::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+.light-scroll::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+}
+
+/* Handle */
+.light-scroll::-webkit-scrollbar-thumb {
+  background: #ffb568 !important;
+  border-radius: 10px !important;
+}
+
+/* Handle on hover */
+.light-scroll::-webkit-scrollbar-thumb:hover {
+  background: #efbe8a !important;
+}
+
+.dark-scroll::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+.dark-scroll::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+}
+
+/* Handle */
+.dark-scroll::-webkit-scrollbar-thumb {
+  background: #efbe8a !important;
+  border-radius: 10px !important;
+}
+
+/* Handle on hover */
+.dark-scroll::-webkit-scrollbar-thumb:hover {
+  background: #ffb568 !important;
+}
+
+.shadow-dark {
+  box-shadow: 0px 0px 24px 0px #EFBE8A;
+}
+
+.shadow-light {
+  box-shadow: 0px 0px 24px 0px #2E2E2E;
+}
+
+@media (max-width: 768px) {
+  .shadow-dark {
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+  .shadow-light {
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+}
+.container-checkOut {
+  @apply font-custRoboto;
+}
+.container-checkOut table {
+  @apply table-auto w-full text-start p-4 endPhone:text-[0.65rem];
+}
+.container-checkOut table thead {
+  @apply text-light-theme-title-color;
+}
+.container-checkOut table thead tr th {
+  @apply text-start p-2;
+}
+.container-checkOut table tbody tr td {
+  @apply p-2;
+}
+.container-checkOut .container-total-account {
+  @apply my-8 endPhone:gap-4 endPhone:my-4 endPhone:flex-col-reverse flex mx-0 justify-between items-center;
+}
+.container-checkOut .container-total-account .totalPrice {
+  @apply endPhone:w-full font-bold endPhone:text-lg endPhone:gap-2 flex flex-col py-2 px-8 border w-32 rounded-2xl justify-center items-center;
+}
+.container-checkOut .container-total-account .container-account {
+  @apply flex gap-4 endPhone:p-3 endPhone:flex-col p-4 justify-between items-center border-2 rounded-xl;
+}
+.container-checkOut .container-total-account .container-account img {
+  @apply rounded-full border;
+  box-shadow: 0px 0px 100px 0px;
+}
+
+.inputShadow:focus {
+  box-shadow: 0px 0px 50px 0px #efbe8a;
+}
+
+.inputShadowLight {
+  box-shadow: 0px 0px 50px 0px #ffb568;
+}
+
+.inputNotShadow {
+  box-shadow: 0px 0px 50px 0px transparent;
+}
+
+.container-recieptPage {
+  @apply flex flex-col gap-8 py-12 font-custRoboto;
+}
+.container-recieptPage .container-pdf {
+  @apply flex justify-evenly items-center gap-4 endPhone:flex-col;
+}
+.container-recieptPage .container-pdf .container-account {
+  @apply flex gap-4 endPhone:p-3 endPhone:flex-col p-4 justify-between items-center border-2 rounded-xl endPhone:w-full;
+}
+.container-recieptPage .container-pdf .container-account img {
+  @apply rounded-full border;
+  box-shadow: 0px 0px 100px 0px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Light.woff2") format("woff2"), url("./assets/fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.woff2") format("woff2"), url("./assets/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Medium.woff2") format("woff2"), url("./assets/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.woff2") format("woff2"), url("./assets/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Black.woff2") format("woff2"), url("./assets/fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Repeat for other weights (500, 600, 700, 800, 900) *//*# sourceMappingURL=index.css.map */

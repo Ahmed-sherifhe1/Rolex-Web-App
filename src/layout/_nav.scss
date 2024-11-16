@@ -1,0 +1,33 @@
+nav {
+    @apply z-[50]
+}
+
+.container-nav {
+    @apply flex justify-between items-center py-6;
+}
+
+
+.links-list {
+    @apply flex tablet:gap-[0.8rem] endMediumLap:gap-[1.3rem] tablet:text-xs mediumLap:text-base bigLap:gap-[3.5rem] endPhone:absolute endPhone:top-1/3 endPhone:left-1/2 endPhone:translate-x-[-50%] endPhone:translate-y-[-50%] endPhone:flex-col endPhone:items-center endPhone:gap-6 endPhone:text-3xl endPhone:font-medium endPhone:uppercase;
+}
+
+
+.container-links {
+    @apply endPhone:fixed endPhone:z-50 endPhone:h-[100dvh] endPhone:w-full endPhone:top-0 endPhone:left-full transition-all duration-700;
+
+    li {
+        @apply transition-all duration-300;
+
+        &:hover {
+            @apply cursor-pointer;
+        }
+    }
+}
+
+
+
+
+
+.logo-links {
+    @apply w-1/2 flex justify-between items-center overflow-hidden text-light-theme-title-color;
+}

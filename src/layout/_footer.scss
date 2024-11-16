@@ -1,0 +1,71 @@
+footer {
+    @apply py-8;
+
+    .container-footer {
+        @apply endPhone:flex-col endPhone:gap-12 flex justify-between endTablentMinMax:text-xs;
+
+        .card {
+            @apply flex flex-col gap-4;
+
+            h3 {
+                @apply font-medium text-xl;
+            }
+
+            ul {
+                @apply flex flex-col gap-2;
+
+            }
+
+            &:not(:first-child) {
+                ul {
+                    li {
+                        @apply hover:translate-x-3 transition-all duration-700;
+                    }
+                }
+            }
+
+            &:last-child {
+                div {
+                    @apply flex gap-4 text-2xl endTablentMinMax:text-xl;
+
+                    a {
+                        @apply transition-all duration-700;
+
+
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .container-copyrights {
+        @apply py-4 text-center font-custRoboto;
+
+        hr {
+            @apply my-8 border-0 h-[1px];
+        }
+
+        .end-footer {
+            @apply text-light-theme-text-color-light;
+
+            .myName {
+                animation: lightning 2s alternate backwards infinite;
+                font-family: "Dancing Script", cursive !important;
+            }
+        }
+    }
+}
+
+
+
+@keyframes lightning {
+    0% {
+        text-shadow: 0 0 20px #FFB568;
+    }
+
+    100% {
+        text-shadow: 0 0 0px #FFB568;
+    }
+}
