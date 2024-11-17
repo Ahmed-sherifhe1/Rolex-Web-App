@@ -62,7 +62,7 @@ To create a production build, run:
 The optimized build will be stored in the dist directory.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the <a href="https://github.com/Ahmed-sherifhe1/Rolex-Web-App#MIT-1-ov-file">LICENSE</a> file for more information.
 
 ### Acknowledgements
 
