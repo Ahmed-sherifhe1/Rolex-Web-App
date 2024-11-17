@@ -192,6 +192,7 @@ export default function Cart({ sideBar, x, container }) {
                           document
                             .querySelector("#cart")
                             .classList.remove("right-0");
+                          localStorage.removeItem("delayEveryThing");
                         });
                       }}
                       whileTap={{ scale: 0.95 }}
